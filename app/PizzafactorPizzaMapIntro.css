@@ -1,0 +1,96 @@
+.game-map-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--game-rim);
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at left bottom, #42314b, transparent 70%), #272033;
+}
+.game-map-intro__copy {
+  padding: clamp(24px, 4.5vw, 76px);
+}
+.game-map-intro h1 {
+  margin: 20px 0;
+  font: 400 clamp(40px, 5.6vw, 88px)/0.99 var(--game-display);
+  letter-spacing: -0.075em;
+  color: var(--game-cream);
+  text-shadow: 0 4px #1b1328;
+}
+.game-map-intro h1 em {
+  color: var(--game-gold);
+  font-style: normal;
+}
+.game-map-intro__copy > p:not(.game-tag) {
+  max-width: 32ch;
+  color: #e5d7e7;
+  font: 700 clamp(16px, 1.4vw, 20px)/1.45 var(--game-body);
+}
+.game-map-intro ul {
+  display: flex;
+  gap: clamp(5px, 1vw, 18px);
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+.game-map-intro li {
+  display: grid;
+  gap: 4px;
+  justify-items: center;
+  font: 800 11px var(--game-body);
+}
+.game-map-intro li img {
+  width: clamp(32px, 3.5vw, 48px);
+  height: auto;
+}
+.game-map-intro__map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 760px;
+  object-fit: cover;
+  object-position: center;
+  border-left: 1px solid var(--game-rim);
+}
+.game-map-intro__actions {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.game-map-intro__actions > * {
+  min-height: 48px;
+}
+@media (max-width: 700px) {
+  .game-map-intro {
+    grid-template-columns: 1fr;
+  }
+  .game-map-intro__map {
+    grid-row: 1;
+    max-height: clamp(175px, 29svh, 255px);
+    object-position: center 47%;
+    border: 0;
+    border-bottom: 1px solid var(--game-rim);
+  }
+  .game-map-intro__copy {
+    padding: 21px;
+  }
+  .game-map-intro h1 {
+    margin: 14px 0;
+    font-size: clamp(38px, 9vw, 54px);
+  }
+  .game-map-intro h1 br {
+    display: none;
+  }
+  .game-map-intro h1 br::after {
+    content: ' ';
+  }
+  .game-map-intro h1 em {
+    margin-left: 0.14em;
+  }
+  .game-map-intro ul {
+    margin: 16px 0 20px;
+    justify-content: space-between;
+  }
+}

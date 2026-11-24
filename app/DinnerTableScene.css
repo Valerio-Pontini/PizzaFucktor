@@ -1,0 +1,291 @@
+.dinner-table-scene {
+  --table-ink: #273e32;
+  --table-paper: #fff8e9;
+  min-width: 0;
+}
+
+.dinner-table-scene__heading { margin: 0 auto 9px; text-align: center; }
+.dinner-table-scene__heading p { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+
+.dinner-table-scene .dinner-table-scene__stage {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  width: min(100%, 760px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: clamp(12px, 2vw, 24px);
+  background: #774924;
+  box-shadow: 0 13px 32px #63422030, 0 0 0 1px #6e4d3029;
+}
+
+.dinner-table-scene__stage::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 54%, transparent 45%, #481e0c29 100%);
+  box-shadow: inset 0 0 0 1px #ffedca35;
+  content: '';
+  pointer-events: none;
+}
+
+.dinner-table-scene__artwork {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  animation: dinner-art-arrive .65s cubic-bezier(.18,.78,.25,1) both;
+}
+
+.dinner-table-scene__actor {
+  position: absolute;
+  z-index: 3;
+  right: 3%;
+  bottom: 2%;
+  width: 21%;
+  --actor-shadow: drop-shadow(0 5px 4px #51311c6e);
+}
+
+.dinner-table-scene__caption {
+  position: absolute;
+  z-index: 2;
+  top: 5.2%;
+  left: 33%;
+  display: grid;
+  width: 34%;
+  min-height: 5.8%;
+  place-items: center;
+  padding: 4px 7px;
+  border: 1px solid #b3713c3d;
+  border-radius: 27% 27% 32% 32% / 39% 39% 42% 42%;
+  background: linear-gradient(#fff1d7, #f5d8af);
+  box-shadow: inset 0 1px #fff9e8c2, 0 3px 7px #74381733;
+  text-align: center;
+  pointer-events: none;
+}
+
+.dinner-table-scene__caption strong {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #692e20;
+  font-family: Georgia, serif;
+  font-size: clamp(11px, 2.7cqi, 21px);
+  font-weight: 800;
+  line-height: 1.06;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.dinner-table-scene__official-badge {
+  position: absolute;
+  z-index: 2;
+  top: 20.6%;
+  left: 80%;
+  display: block;
+  width: 8.8%;
+  height: 8.8%;
+  padding: 1px;
+  border-radius: 50%;
+  background: #fff3d5;
+  box-shadow: 0 2px 4px #391f1a30;
+  object-fit: contain;
+  rotate: 8deg;
+  animation: dinner-badge-arrive .5s .32s cubic-bezier(.2,.85,.25,1.2) both;
+}
+
+.dinner-table-scene__hotspot {
+  position: absolute;
+  z-index: 4;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dinner-table-scene__hotspot::before {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  content: '';
+  pointer-events: auto;
+}
+
+.dinner-table-scene__hotspot--menu { z-index: 5; top: 13%; left: 2%; width: 32%; height: 29%; }
+.dinner-table-scene__hotspot--menu::before { clip-path: polygon(0 14%, 87% 0, 100% 87%, 13% 100%); }
+.dinner-table-scene__hotspot--diary { z-index: 5; top: 16%; left: 72%; width: 22%; height: 20%; }
+.dinner-table-scene__hotspot--diary::before { clip-path: polygon(14% 0, 100% 4%, 93% 100%, 0 90%); }
+.dinner-table-scene__hotspot--pizza { top: 30%; left: 17%; width: 67%; height: 62%; border-radius: 50%; }
+
+.dinner-table-scene__hotspot > span {
+  position: absolute;
+  z-index: 1;
+  display: inline-flex;
+  min-height: 25px;
+  align-items: center;
+  gap: 5px;
+  padding: 6px clamp(7px, 1.4cqi, 11px);
+  border: 1px solid #fff6db;
+  border-radius: 6px;
+  color: #fff7e3;
+  background: var(--team-accent);
+  box-shadow: 0 3px 10px #351e1766, inset 0 1px #fff9eb33;
+  font-size: clamp(11px, 2.4cqi, 15px);
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.dinner-table-scene__hotspot > span b { color: #ffdb7b; font-size: 1.12em; }
+.dinner-table-scene__hotspot--menu > span { top: 60%; left: 17%; transform: rotate(-8deg); }
+.dinner-table-scene__hotspot--diary > span { top: 66%; right: 4%; transform: rotate(7deg); }
+.dinner-table-scene__hotspot--pizza > span {
+  top: 85%;
+  left: 50%;
+  min-height: 34px;
+  padding-inline: clamp(9px, 2.4cqi, 18px);
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+}
+
+.dinner-table-scene__hotspot:not(:disabled):is(:hover, :focus-visible) > span {
+  box-shadow: 0 4px 11px #351e178f, 0 0 0 3px #ffdd8e9e;
+}
+
+.dinner-table-scene__hotspot:focus-visible {
+  outline: 2px solid #fff6df;
+  outline-offset: 2px;
+  box-shadow: inset 0 0 0 3px #4c270baa;
+}
+
+.dinner-table-scene__hotspot:disabled { cursor: not-allowed; }
+.dinner-table-scene__hotspot:disabled > span { color: #fff8ec; background: #534034; }
+
+.dinner-table-scene__legend {
+  display: flex;
+  width: min(100%, 760px);
+  justify-content: center;
+  gap: 0 clamp(6px, 1.3vw, 16px);
+  flex-wrap: wrap;
+  margin: 7px auto 0;
+}
+
+.dinner-table-scene__legend button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 5px;
+  border: 0;
+  border-bottom: 1px solid #b7946745;
+  color: #344d3e;
+  background: transparent;
+  font-size: clamp(12px, 1.1vw, 14px);
+  font-weight: 850;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dinner-table-scene__legend button:not(:disabled):is(:hover, :focus-visible) { color: var(--tomato-dark); }
+.dinner-table-scene__legend button:disabled { color: #64594c; opacity: 1; cursor: not-allowed; }
+.dinner-table-scene__legend button span { color: var(--tomato-dark); font-size: 16px; line-height: 1; }
+.dinner-table-scene__vote-notice { max-width: 740px; margin: 10px auto 0; padding: 9px 13px; border: 1px solid #d3b78a; border-radius: 8px; color: #684a32; background: #fff3d9; font-size: 13px; font-weight: 750; line-height: 1.4; text-align: center; }
+.dinner-table-scene__vote-notice--own { border-color: #c77c66; color: #793b2d; background: #fff0e7; }
+
+.dinner-table-scene__dialog::backdrop {
+  background: #302719aa;
+  backdrop-filter: blur(4px);
+  animation: dinner-veil-in .18s ease-out both;
+}
+
+.dinner-table-scene__dialog {
+  margin: auto;
+  width: min(calc(100% - 28px), 515px);
+  max-height: min(86vh, 760px);
+  max-height: min(86dvh, 760px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: clamp(19px, 4vw, 33px);
+  border: 1px solid #e6ccaa;
+  border-top: 4px solid var(--team-accent);
+  border-radius: 5px 21px 21px 5px;
+  color: #273e32;
+  background: linear-gradient(142deg, #fffaf0 32%, #f8ecd7db), url('/assets/vote-kit/common/paper_sheet.webp') center / cover;
+  box-shadow: 0 24px 68px #271c16a6, inset 2px 0 #bf936139;
+  animation: dinner-dialog-in .24s cubic-bezier(.18,.78,.25,1) both;
+}
+
+.dinner-table-scene__dialog[data-panel="diary"] { box-shadow: 0 24px 68px #271c16a6, inset 4px 0 #bf936159; }
+
+.dinner-table-scene__back {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin: -3px 0 12px;
+  padding: 6px 11px;
+  border: 1px solid #b98f584d;
+  border-radius: 4px 10px 10px 4px;
+  background: #fff9eacc;
+  color: var(--team-accent);
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.dinner-table-scene__back:hover { background: #fffdf6; }
+.dinner-table-scene__dialog :is(a, button):focus-visible { outline: 2px solid var(--team-accent); outline-offset: 3px; }
+.dinner-table-scene__dialog > .section-kicker { margin: 0 0 6px; color: var(--team-accent); }
+.dinner-table-scene__dialog h3 {
+  margin: 0 0 17px;
+  color: #273e32;
+  font-size: clamp(26px, 5vw, 39px);
+  font-weight: 950;
+  letter-spacing: -.055em;
+  line-height: 1.04;
+  overflow-wrap: anywhere;
+}
+.dinner-table-scene__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.dinner-table-scene__actions .button { min-height: 44px; padding: 10px 13px; font-size: 12px; text-decoration: none; }
+.dinner-table-scene__empty { color: #506053; font-size: 14px; line-height: 1.55; }
+.dinner-table-scene__scores { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; margin: 5px 0 16px; border-top: 1px solid #bb926244; }
+.dinner-table-scene__scores span { display: flex; justify-content: space-between; gap: 7px; padding: 10px 0; border-bottom: 1px solid #bb926244; color: #4c5d50; font-size: 13px; }
+.dinner-table-scene__scores b { color: #273e32; white-space: nowrap; }
+.dinner-table-scene__rating { display: inline-flex; align-items: baseline; gap: 9px; padding: 7px 10px; border: 1px solid #b693604a; border-radius: 4px 11px 11px 4px; background: #fff5df; color: #64563d; font-size: 12px; font-weight: 750; }
+.dinner-table-scene__rating strong { color: var(--team-accent); font-size: 21px; font-weight: 950; }
+.dinner-table-scene__dialog blockquote { margin: 13px 0 0; padding: 11px 12px; border-left: 2px solid var(--team-accent); background: #fffdf385; color: #455a4c; font-size: 14px; font-style: italic; line-height: 1.55; white-space: pre-line; overflow-wrap: anywhere; }
+.dinner-table-scene__vote-cta { margin-top: 14px; }
+
+@keyframes dinner-art-arrive { from { opacity: .25; transform: scale(1.025); } to { opacity: 1; transform: scale(1); } }
+@keyframes dinner-badge-arrive { from { opacity: 0; transform: translateY(7px) scale(.78); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes dinner-veil-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dinner-dialog-in { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .dinner-table-scene__artwork, .dinner-table-scene__official-badge, .dinner-table-scene__dialog::backdrop, .dinner-table-scene__dialog { animation: none; }
+  .dinner-table-scene__hotspot > span { transition: none; }
+}
+
+@media (max-width: 560px) {
+  .dinner-table-scene__heading { margin-bottom: 7px; text-align: left; }
+  .dinner-table-scene__heading p { font-size: 13px; }
+  .dinner-table-scene__legend { margin-top: 4px; }
+}
+
+.dinner-table-scene__notebook { display: grid; gap: 10px; }
+.dinner-table-scene__notebook .button { justify-self: start; }
+.dinner-table-scene__notebook output { color: #425844; font-size: 14px; }
+.dinner-table-scene__notes { list-style: none; padding: 0; margin: 12px 0; }
+.dinner-table-scene__notes li { border-top: 1px solid #bb92625e; padding: 12px 0; }
+.dinner-table-scene__notes time { color: #65553e; font-size: 12px; }
+.dinner-table-scene__notes p, .dinner-table-scene__menu-text { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.6; }
+.dinner-table-scene__notes p { margin: 4px 0 0; }

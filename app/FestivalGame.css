@@ -1,0 +1,654 @@
+/* The palette is shared by the plaza, enamel signs and inset controls. */
+body:has(.festival-game),
+body:has(.festival-lobby),
+body:has(.guest-app) {
+  background: var(--game-night);
+}
+.festival-game,
+.guest-app {
+  font-family: var(--game-body);
+  --tomato-dark: #ffbf89;
+  --ink: var(--game-cream);
+  --ink-soft: var(--game-soft);
+  --ux-rule: #8c718355;
+  --ux-rule-soft: #997c892c;
+  --enamel: linear-gradient(145deg, #41334c, #292538 65%);
+  --enamel-teal: linear-gradient(145deg, #29474c, #202c39 65%);
+  --edge: #65526e;
+  --inset: #211c2c;
+  --letter: #fff3df;
+  --quiet: #dbcee4;
+  --accent: #ffd286;
+  --relief: inset 0 1px #ffe6ff1f, 0 3px #100d1b, 0 12px 24px -16px #0d0917;
+  color-scheme: dark;
+}
+.site-shell.festival-game {
+  padding-bottom: 25px;
+}
+.festival-game .topbar {
+  background: #1d1928f5;
+  border-bottom: 1px solid #4c3d57;
+  color: var(--game-cream);
+  min-height: 66px;
+  box-shadow: 0 4px 18px #120d1e36;
+}
+.festival-game .brand img {
+  width: 42px;
+  height: 42px;
+}
+.festival-game .brand b,
+.guest-screen .game-brand b {
+  color: var(--game-gold);
+}
+.festival-game .account-avatar {
+  color: #ffd878;
+  background: linear-gradient(145deg, #584360, #302738);
+  border: 1px solid #806183;
+}
+.festival-game .account-label {
+  color: #f5edfa;
+}
+.festival-game .signout-label {
+  color: #dacbe4;
+}
+.festival-game .desktop-nav button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #e4d6ed;
+  min-height: 42px;
+  border-radius: 10px;
+  padding: 5px 13px;
+  font: 800 14px var(--game-body);
+}
+.festival-game .desktop-nav button:is(.is-current, :hover) {
+  background: #3b3047;
+  color: #ffe2a4;
+}
+.festival-game .desktop-nav button::after {
+  content: none;
+}
+.festival-game .scene-shell {
+  background: var(--game-night);
+  padding-top: 12px;
+}
+.festival-game .scene-shell::before,
+.festival-game .scene-shell::after,
+.festival-game .scene-shell__set-piece {
+  display: none;
+}
+.festival-game .scene-shell__hud {
+  padding: 7px 0 12px;
+}
+.festival-game .scene-shell__chapter {
+  color: #dfbddc;
+  font-size: 10px;
+}
+.festival-game .scene-shell__route strong {
+  color: var(--game-cream);
+  font: 900 17px/1.1 var(--game-body);
+}
+.festival-game .scene-shell__progress {
+  color: #ffce61;
+}
+.festival-game .scene-shell__progress small {
+  color: #d8c7df;
+}
+.festival-game .scene-shell__back,
+.guest-app .guest-screen .guest-back {
+  background: #332b40;
+  border: 1px solid #685475;
+  color: #fff1df;
+  border-radius: 12px;
+  min-height: 42px;
+}
+.festival-game .control-main,
+.festival-game .control-room {
+  min-width: 0;
+}
+.festival-game .content-view {
+  border: 0;
+}
+.festival-game .site-footer {
+  border-color: #51415b;
+  color: #c1b1c9;
+}
+.festival-game .footer-brand {
+  color: #ffe5b6;
+}
+.festival-game .control-heading h1,
+.festival-game .control-heading > div > p:not(.eyebrow),
+.festival-game .loading-card,
+.festival-game .team-setup--backstage .privacy-note {
+  color: var(--game-soft);
+}
+.festival-game .control-heading .eyebrow {
+  color: #ffbc72;
+}
+.festival-game .control-heading {
+  border-color: #4a394e;
+}
+.festival-game .notice {
+  position: relative;
+  z-index: 3;
+  background: #fff4d9;
+  border-radius: 10px;
+}
+.festival-game
+  :is(
+    .home-pizzeria-map__heading,
+    .view-heading,
+    .pizzeria-entrance__info,
+    .pizzeria-detail-view__heading,
+    .edition-ribbon__heading,
+    .competition-board__heading,
+    .control-heading,
+    .setup-heading,
+    .team-board-scene__intro,
+    .judgment-heading
+  )
+  :is(h1, h2, h3),
+.festival-game
+  :is(
+    .section-heading,
+    .turn-heading,
+    .history-album__empty-page,
+    .team-setup--backstage .form-card,
+    .dinner-table-scene__dialog,
+    .pizzeria-detail-card,
+    .final-winners__copy
+  )
+  :is(h2, h3),
+.festival-game .competition-board__scene-head strong {
+  font-family: var(--game-display);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+.festival-game .view-heading h2 em,
+.festival-game .home-pizzeria-map__heading h2 em,
+.festival-game .team-board-scene__intro h2 em {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+}
+.festival-game .home-pizzeria-map .home-pizzeria-map__art {
+  margin: 0;
+  overflow: hidden;
+  border: 2px solid #826177;
+  border-radius: 22px;
+  box-shadow:
+    0 5px #100d19,
+    0 12px 26px #0c071b57;
+}
+.festival-game .scene-shell--home .home-pizzeria-map__heading {
+  border: none;
+}
+.festival-game .home-pizzeria-map .home-pizzeria-map__heading h2,
+.festival-game
+  .scene-shell
+  :is(.votes-view, .history-view, .pizzeria-edit-view)
+  .view-heading
+  h2 {
+  color: var(--game-cream);
+  text-shadow: 0 3px #0f0c19;
+}
+.festival-game .home-pizzeria-map__heading h2 em,
+.festival-game
+  .scene-shell
+  :is(.votes-view, .history-view, .pizzeria-edit-view)
+  .view-heading
+  h2
+  em {
+  color: var(--game-gold);
+}
+.festival-game .home-pizzeria-map__heading p,
+.festival-game
+  .scene-shell
+  :is(.votes-view, .history-view, .pizzeria-edit-view)
+  .view-heading
+  > p:not(.section-kicker) {
+  color: var(--game-soft);
+}
+.festival-game .home-pizzeria-map__stops {
+  border: 0;
+  gap: 7px;
+  margin-top: 16px;
+}
+.festival-game .home-pizzeria-map__stops button {
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  background: #30293b;
+  border: 1px solid #5c4963;
+  border-left: 4px solid var(--team-accent);
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #fff3e2;
+}
+.festival-game .home-pizzeria-map__stops button:hover {
+  background: #41334c;
+}
+.map-stop-badge {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.festival-game .home-pizzeria-map__stops small,
+.festival-game .home-pizzeria-map__stop-arrow {
+  color: color-mix(in srgb, var(--team-accent), white 53%);
+}
+.festival-game .edition-ribbon,
+.festival-game .home-rhythm,
+.festival-game .home-team-strip,
+.festival-game .competition-board,
+.festival-game .scene-shell--appointments .appointments-view,
+.festival-game .scene-shell--pizzeria .pizzeria-form,
+.festival-game .pizzeria-entrance .pizzeria-entrance__info,
+.festival-game .pizzeria-detail-card,
+.festival-game .pizzeria-review-card,
+.festival-game .pizzeria-detail-empty {
+  border: 1px solid var(--edge);
+  border-radius: 19px;
+  color: var(--ink);
+  background: var(--enamel);
+  box-shadow: var(--relief);
+  padding: clamp(16px, 2.4vw, 32px);
+}
+.festival-game .edition-ribbon__stage-top {
+  align-items: center;
+}
+.festival-game .edition-ribbon__stage-top strong {
+  font-size: 18px;
+  color: #392d40;
+}
+.festival-game .edition-ribbon__track {
+  height: 5px;
+  border-radius: 5px;
+}
+.festival-game .home-team-strip h2,
+.festival-game .home-team-strip p {
+  color: var(--ink);
+}
+.festival-game
+  .scene-shell
+  :is(.votes-view, .history-view, .pizzeria-edit-view)
+  .view-heading
+  > .section-kicker {
+  color: #ffbf82;
+}
+.festival-game :is(.votes-view, .history-view) .view-heading > .text-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 13px;
+  border: 1px solid #665372;
+  border-radius: 11px;
+  background: #30293c;
+  color: #ffe2a5;
+}
+.festival-game .scene-shell--appointments .appointments-view::before,
+.festival-game .scene-shell--appointments .appointments-view::after {
+  content: none;
+}
+.festival-game .appointments-scene-heading {
+  padding: clamp(16px, 3vw, 36px);
+  border-radius: 15px;
+  background:
+    linear-gradient(90deg, #2a1f34fa, #321f36c9 65%, #231d3099),
+    var(--kitchen-art) 50% 48% / cover;
+}
+.festival-game .appointments-scene-heading h2,
+.festival-game .appointments-scene-heading h2 em {
+  color: var(--game-cream);
+}
+.festival-game .appointments-scene-heading h2 em {
+  color: var(--game-gold);
+}
+.festival-game .appointments-scene-heading .section-kicker,
+.festival-game .appointments-scene-heading .view-heading > p {
+  color: #f1dce6;
+}
+.festival-game .appointments-scene-count {
+  color: #592b17;
+  background: #ffdb8c;
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.festival-game .appointments-scene-count :is(span, strong) {
+  color: #5c331c;
+}
+.festival-game .appointment-calendar-card .appointment-calendar-card__face {
+  border-radius: 15px 15px 0 0;
+  box-shadow: inset 0 2px #fffef4;
+}
+.festival-game .next-stop-wheel {
+  border-radius: 18px;
+}
+.festival-game .votes-view .vote-candidates,
+.festival-game .history-album {
+  border-radius: 17px;
+  box-shadow: 0 4px #695267;
+}
+.festival-game .vote-candidates h3 {
+  background: #52385f;
+  font: 400 21px var(--game-display);
+  letter-spacing: -0.045em;
+}
+.festival-game .competition-board__scene {
+  background:
+    linear-gradient(0deg, #21182b55, transparent 65%),
+    url('/assets/festival/sera/palco.webp') center / cover;
+  border-color: #82597a;
+}
+.festival-game .competition-board__podium-block--empty,
+.festival-game
+  .competition-board__podium-slot--1
+  .competition-board__podium-block--empty {
+  background: #563953;
+}
+.festival-game .competition-board__podium-block--empty > strong {
+  font-family: var(--game-body);
+  color: white;
+}
+.festival-game .competition-board__prize {
+  right: 4px;
+  top: -27px;
+  width: 43px;
+  height: 43px;
+  transform: none;
+  animation: none;
+}
+.festival-game .final-winners__stamp {
+  border: 0;
+}
+.festival-game .history-memory {
+  border-radius: 12px;
+}
+.festival-game .history-memory__photo,
+.festival-game .history-album__empty-photo {
+  background: var(--kitchen-art) center/cover;
+}
+.festival-game .history-memory__photo::before {
+  background: linear-gradient(0deg, #3c223a66, transparent);
+}
+.festival-game .team-board-scene__backdrop {
+  background:
+    linear-gradient(105deg, #3120391f, #24162c80),
+    var(--kitchen-art) center/cover;
+}
+.festival-game .team-board-scene__intro {
+  background: linear-gradient(145deg, #47314f, #2a2438);
+  box-shadow:
+    inset 0 2px #ffffff18,
+    0 4px #211824;
+}
+.festival-game .team-board-scene__intro h2 em {
+  color: var(--game-gold);
+}
+.festival-game .backstage-scene,
+.festival-game .pizzeria-entrance__stage,
+.festival-game .dinner-table-scene__stage,
+.festival-game .judgment-stage {
+  border: 2px solid #856582;
+  border-radius: 20px;
+  box-shadow: 0 5px #110d1a;
+}
+.festival-game .team-setup--backstage {
+  --setup-paper: var(--enamel);
+  --setup-ink: var(--letter);
+  --setup-border: var(--edge);
+  --setup-tomato: var(--accent);
+}
+.festival-game .team-setup--backstage :is(.form-card, .setup-heading) {
+  border-radius: 16px;
+  box-shadow: 0 4px #6b5264;
+}
+.festival-game .pizzeria-detail-view__heading {
+  color: #fff2dd;
+}
+.festival-game .pizzeria-detail-view__heading .section-kicker {
+  color: #ffd18b;
+}
+.festival-game .pizzeria-detail-view__heading h2 {
+  color: #fff5e7;
+}
+.festival-game .pizzeria-detail-view__heading p:not(.section-kicker),
+.festival-game .dinner-table-scene__heading p {
+  color: var(--game-soft);
+}
+.festival-game .pizzeria-detail-view__grid {
+  gap: 15px;
+}
+.festival-game .pizzeria-entrance__info h2 {
+  color: var(--letter);
+}
+.festival-game .dinner-table-scene__legend button,
+.festival-game .dinner-table-scene__hotspot > span {
+  border: 1px solid #92759c;
+  background: #38293ff5;
+  color: #ffebca;
+  border-radius: 10px;
+}
+.festival-game .dinner-table-scene__dialog {
+  border: 2px solid #8c6a80;
+  border-radius: 18px;
+}
+.festival-game .judgment-stage {
+  background:
+    linear-gradient(100deg, #28172d9c, #30263b4d),
+    var(--kitchen-art) center/cover;
+}
+.festival-game .judgment-form-progress {
+  color: #fff2df;
+}
+.festival-game .judgment-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.festival-game .button.button-primary,
+.festival-game .team-setup--backstage .button-primary,
+.guest-app .guest-screen .guest-submit,
+.festival-game .judgment-submit:not(:disabled),
+.festival-game .votes-view .candidate-vote:not(:disabled) {
+  color: #462707;
+  border: 1px solid #f4be57;
+  background: linear-gradient(#ffdd76, #ffb934);
+  border-radius: 12px;
+  box-shadow:
+    inset 0 2px #fff1ab,
+    0 3px #b16a24;
+  font: 900 15px/1.25 var(--game-body);
+}
+.festival-game .button-outline {
+  border: 1px solid #9a808f;
+  border-radius: 12px;
+  color: #463146;
+  background: #fff6e7;
+  box-shadow: 0 2px #ad958f;
+}
+.festival-game,
+.guest-app {
+  --kitchen-art: url('/assets/festival/cucina-1400.webp');
+}
+.guest-app .guest-screen--auth {
+  background: var(--game-night);
+  font-family: var(--game-body);
+  --guest-display: var(--game-display);
+  --guest-inset: max(5%, calc((100% - 1260px) / 2));
+}
+.guest-app .guest-topline {
+  border-color: #58455d;
+}
+.guest-app .guest-auth-world {
+  position: relative;
+  border: 2px solid #735568;
+  border-radius: 22px;
+  background: var(--kitchen-art) 29% center/cover;
+  box-shadow: 0 5px #100d19;
+}
+.guest-app .guest-auth-world > .game-icon {
+  position: absolute;
+  bottom: 13px;
+  right: 15px;
+  filter: drop-shadow(0 5px 5px #1c12276b);
+}
+.guest-app .guest-screen .guest-auth-panel {
+  border: 1px solid var(--edge);
+  border-radius: 20px;
+  box-shadow: var(--relief);
+  background: var(--enamel);
+}
+.guest-app .guest-screen .guest-auth-heading h1 {
+  font-weight: 400;
+  letter-spacing: -0.07em;
+}
+.guest-app .guest-screen .guest-auth-heading h1 em {
+  color: var(--game-gold);
+  font-style: normal;
+}
+.festival-game :is(input, textarea, select):focus-visible,
+.guest-app input:focus-visible {
+  outline: 3px solid #a463c2;
+  outline-offset: 1px;
+}
+:is(.festival-game, .festival-lobby, .guest-app) :is(button, a):focus-visible {
+  outline: 3px solid #f7b734;
+  outline-offset: 3px;
+}
+@media (max-width: 800px) {
+  .festival-game,
+  .guest-app {
+    --kitchen-art: url('/assets/festival/cucina-760.webp');
+  }
+}
+@media (max-width: 680px) {
+  .festival-game .topbar {
+    min-height: 55px;
+  }
+  .festival-game .brand img {
+    width: 34px;
+    height: 34px;
+  }
+  .festival-game .scene-shell__route > .game-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .festival-game .scene-shell__route strong {
+    font-size: 14px;
+  }
+  .festival-game .scene-shell__chapter {
+    font-size: 9px;
+  }
+  .festival-game .scene-shell__back {
+    min-width: 40px;
+  }
+  .festival-game .mobile-dock {
+    background: linear-gradient(#30263a, #211b2c);
+    border: 1px solid #654e70;
+    box-shadow: 0 -3px 15px #100c1c4d;
+  }
+  .festival-game .mobile-dock button {
+    color: #d9c9e3;
+    font: 800 11px var(--game-body);
+  }
+  .festival-game .mobile-dock button.is-current {
+    color: #ffe099;
+  }
+  .festival-game .mobile-dock button > span {
+    height: 30px;
+  }
+  .festival-game .mobile-dock button.is-current > span {
+    background: #5b4163;
+    box-shadow: inset 0 1px #a07da251;
+  }
+  .festival-game .mobile-dock img {
+    width: 28px;
+    height: 28px;
+  }
+  .festival-game .scene-shell {
+    padding-bottom: 90px;
+  }
+  .festival-game .home-pizzeria-map__stops {
+    margin-top: 10px;
+  }
+  .festival-game .home-pizzeria-map__stops button {
+    grid-template-columns: 25px minmax(0, 1fr) auto;
+    padding: 7px;
+    gap: 6px;
+  }
+  .festival-game .home-pizzeria-map .home-pizzeria-map__art {
+    border-radius: 16px;
+  }
+  .festival-game .home-pizzeria-map .home-pizzeria-map__heading h2 {
+    font-size: clamp(28px, 8vw, 42px);
+  }
+  .festival-game .scene-shell--appointments .appointments-view,
+  .festival-game .competition-board {
+    padding: 13px;
+  }
+  .festival-game .appointments-scene-heading .view-heading > p {
+    font-size: 14px;
+  }
+  .guest-app .guest-auth-world {
+    aspect-ratio: auto;
+    height: 100px;
+    border-radius: 16px;
+    background-position: 50% 53%;
+  }
+  .guest-app .guest-auth-world > .game-icon {
+    width: 44px;
+    height: 44px;
+    bottom: 6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(.festival-game, .guest-app, .festival-lobby) *,
+  :is(.festival-game, .guest-app, .festival-lobby) *::after,
+  :is(.festival-game, .guest-app, .festival-lobby) *::before {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.festival-game .pizzeria-entrance__stage-footer {
+  color: #eddfed;
+}
+.festival-game .pizzeria-entrance__stage-footer-hint {
+  color: #ffd88c;
+}
+.festival-game .pizzeria-detail-view__grid .pizzeria-review-card__waiting {
+  color: var(--quiet);
+}
+.festival-game .dinner-table-scene__legend button > span {
+  color: #ffd478;
+}
+.festival-game
+  .dinner-table-scene__legend
+  button:not(:disabled):is(:hover, :focus-visible) {
+  background: #504159;
+  color: white;
+}
+.festival-game .judgment-heading p,
+.festival-game .judgment-rating__label small {
+  font-size: 11px;
+}
+.festival-game .judgment-rating__label strong {
+  font-family: var(--game-body);
+  font-weight: 900;
+}
+.festival-game .history-album__empty-page > strong {
+  font-family: var(--game-display);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+.festival-game .team-board-scene__photo::before {
+  background: var(--kitchen-art) 60% center / cover;
+}
+@media (max-width: 680px) {
+  .festival-game .dinner-table-scene__legend button {
+    min-height: 44px;
+  }
+  .festival-game .judgment-rating__label small {
+    font-size: 10px;
+  }
+}

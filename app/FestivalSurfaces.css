@@ -1,0 +1,938 @@
+/* Satin enamel for interactive labels, lacquered wood for the surrounding scenes. */
+.festival-game,
+.guest-app {
+  color: var(--letter);
+}
+.guest-app .guest-screen--auth {
+  --guest-ink: var(--letter);
+  --guest-rule: var(--edge);
+  --guest-tomato: var(--accent);
+}
+.guest-app .guest-screen .guest-auth-panel {
+  background:
+    radial-gradient(ellipse at 100% 0%, #74405475, transparent 62%),
+    var(--enamel);
+}
+.guest-app .guest-screen .guest-auth-heading h1 {
+  color: var(--letter);
+}
+.guest-app .guest-screen .guest-auth-heading h1 em {
+  text-shadow: none;
+  color: var(--game-gold);
+}
+.guest-app
+  .guest-screen
+  :is(
+    .guest-field,
+    .guest-auth-switch,
+    .guest-auth-note,
+    .guest-auth-heading > p
+  ) {
+  color: var(--quiet);
+}
+.guest-app
+  .guest-screen
+  :is(.guest-password-toggle, .guest-auth-switch button) {
+  color: var(--accent);
+}
+.guest-app .guest-screen .guest-auth-error,
+.festival-game .notice-error {
+  background: #54293c;
+  color: #ffdbd2;
+  border-color: #ec856e;
+}
+.festival-game .notice-success {
+  color: #bff2d9;
+  background: #223e3c;
+  border-color: #67bc97;
+}
+.guest-app .guest-screen .guest-field input,
+.site-shell.festival-game
+  :is(.field, .team-board-scene__name)
+  :is(input, textarea, select) {
+  background: var(--inset);
+  border: 1px solid #75627f;
+  border-radius: 10px;
+  color: var(--letter);
+  box-shadow: inset 0 2px 4px #100c1b59;
+}
+:is(.guest-app, .festival-game) :is(input, textarea)::placeholder {
+  color: #b9a7c2;
+  opacity: 1;
+}
+.site-shell.festival-game
+  :is(
+    .field > span,
+    .form-section-label,
+    .form-footer > span,
+    .reservation-details summary small,
+    .privacy-note,
+    .field b
+  ) {
+  color: var(--quiet);
+}
+.festival-game .reservation-details summary :is(b, i) {
+  color: var(--accent);
+}
+.festival-game .reservation-details {
+  background: var(--inset);
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.festival-game .pizzeria-form .form-section-label {
+  color: #ffcf8d;
+}
+.festival-game .pizzeria-form .form-section-label i {
+  background: var(--edge);
+}
+.festival-game .button-outline,
+.festival-game .dinner-table-scene__back,
+.festival-game .dinner-table-scene__back:hover {
+  color: #ffdfb3;
+  background: #42344a;
+  border: 1px solid #80658b;
+  border-radius: 10px;
+  box-shadow:
+    inset 0 1px #ffffff1c,
+    0 2px #151121;
+}
+.festival-game .button-outline:hover {
+  background: #523d56;
+  color: white;
+}
+.festival-game .section-kicker {
+  color: var(--accent);
+}
+.festival-game .edition-stamp {
+  background: var(--enamel);
+  border-color: var(--edge);
+  color: var(--accent);
+  box-shadow: var(--relief);
+}
+.festival-game .edition-stamp :is(small, span) {
+  color: var(--quiet);
+}
+/* Backstage badges, selection plaques and the enamel fridge. */
+.site-shell.festival-game
+  .team-setup--backstage
+  :is(.form-card, .setup-heading) {
+  border-color: var(--edge);
+  box-shadow: var(--relief);
+  color: var(--letter);
+}
+.site-shell.festival-game
+  .team-setup--backstage
+  :is(
+    .form-card > p,
+    .setup-heading > p,
+    .team-badge-picker > p,
+    .team-badge-option small
+  ) {
+  color: var(--quiet);
+}
+.site-shell.festival-game
+  .team-setup--backstage
+  :is(.field > span, .team-badge-picker legend) {
+  color: var(--letter);
+}
+.site-shell.festival-game .team-setup--backstage .team-badge-option,
+.festival-game .backstage-scene__actor-label {
+  color: var(--letter);
+  background: #302738;
+  border: 1px solid var(--edge);
+  box-shadow: var(--relief);
+}
+.site-shell.festival-game .team-setup--backstage .team-badge-option.is-selected,
+.festival-game
+  .backstage-scene__actor.is-selected
+  .backstage-scene__actor-label {
+  background: linear-gradient(#6d4942, #47303c);
+  border-color: #ffc872;
+  color: #fff0c6;
+}
+.site-shell.festival-game .team-setup--backstage .team-badge-option.is-taken,
+.festival-game .backstage-scene__actor.is-taken .backstage-scene__actor-label {
+  background: #262431;
+  color: #c4b7cd;
+  border-color: #504959;
+}
+.festival-game .backstage-scene__selection {
+  background: #282334f2;
+  color: var(--letter);
+  border: 1px solid #82677d;
+  box-shadow: var(--relief);
+}
+.festival-game .backstage-scene__selection span,
+.festival-game .backstage-scene__actor.is-selected small {
+  color: var(--accent);
+}
+.festival-game .backstage-scene__selection small,
+.festival-game .backstage-scene__actor-label small {
+  color: var(--quiet);
+}
+.festival-game .team-board-scene__fridge {
+  color: var(--letter);
+  background: linear-gradient(118deg, #355659, #253843 45%, #21343a);
+  border: 2px solid #719594;
+  box-shadow:
+    inset 0 3px #95b6a54d,
+    inset 0 -4px #162b34,
+    0 8px 22px #140d21a6;
+}
+.festival-game .team-board-scene__fridge::before {
+  border-color: #a0c3b92e;
+}
+.festival-game .team-board-scene__fridge-top,
+.festival-game .team-board-scene__fridge-top strong {
+  color: #c3eee1;
+}
+.festival-game .team-board-scene__photo,
+.festival-game .team-board-scene__photo-caption {
+  background: #312938;
+  color: var(--letter);
+  border-color: #514555;
+}
+.festival-game .team-board-scene__photo-caption strong,
+.festival-game .team-board-scene__member strong,
+.festival-game .team-board-scene__pizzeria strong {
+  color: var(--letter);
+}
+.festival-game .team-board-scene__photo-caption span,
+.festival-game .team-board-scene__member small,
+.festival-game .team-board-scene__pizzeria em,
+.festival-game .team-board-scene__ticket-copy small {
+  color: var(--quiet);
+}
+.festival-game .team-board-scene__photo-pending,
+.festival-game .team-board-scene__intro-mark {
+  background: #342a3c;
+  color: #ffe0a1;
+  box-shadow: var(--relief);
+}
+.festival-game .team-board-scene__member,
+.festival-game .team-board-scene__member.is-pending,
+.festival-game .team-board-scene__pizzeria {
+  background: #202c35;
+  color: var(--letter);
+  border: 1px solid #577275;
+}
+.festival-game .team-board-scene__member > span,
+.festival-game .team-board-scene__member.is-pending > span {
+  background: #384951;
+  color: #ffdc9e;
+}
+.festival-game .team-board-scene__ticket {
+  background: linear-gradient(115deg, #563951, #3c2d42);
+  border-color: #8b657c;
+}
+.festival-game .team-board-scene__ticket-copy strong {
+  color: #ffe2a0;
+}
+.festival-game
+  :is(
+    .team-board-scene__ticket-copy span,
+    .team-board-scene__ticket button,
+    .team-board-scene__name label > span,
+    .team-board-scene__name button,
+    .team-board-scene__pizzeria > b,
+    .team-board-scene__pizzeria small
+  ) {
+  color: var(--accent);
+}
+/* Arrival and table use edge-to-edge art. Keep text off the door and playable objects. */
+.festival-game .pizzeria-entrance__stage {
+  aspect-ratio: 1;
+  background: #302338;
+}
+.festival-game .pizzeria-entrance__host {
+  top: auto;
+  bottom: 4%;
+  left: 67%;
+  width: 26%;
+  height: 35%;
+}
+.festival-game .pizzeria-entrance__official-badge {
+  top: 3.5%;
+  left: 4%;
+  width: 9%;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  animation: none;
+  transform: none;
+}
+.festival-game .pizzeria-entrance__sign-copy,
+.festival-game .dinner-table-scene__caption {
+  inset: auto auto 3.5% 3%;
+  max-width: 63%;
+  width: max-content;
+  height: auto;
+  min-height: 0;
+  gap: 3px;
+  align-items: start;
+  padding: 6px 12px;
+  border: 1px solid #ab8168;
+  border-radius: 9px;
+  color: var(--letter);
+  background: #281c2eea;
+  box-shadow: var(--relief);
+  transform: none;
+  text-align: left;
+}
+.festival-game .pizzeria-entrance__sign-name,
+.festival-game .dinner-table-scene__caption strong {
+  font: 900 clamp(12px, 3.1cqi, 24px)/1.07 var(--game-body);
+  color: var(--letter);
+  text-align: left;
+  text-shadow: none;
+}
+.festival-game .pizzeria-entrance__sign-eyebrow {
+  color: #ffce85;
+}
+.festival-game .pizzeria-entrance__door-hit-area {
+  top: 45%;
+  height: 35%;
+}
+.festival-game .pizzeria-entrance__door-hit-area > span {
+  background: #4b3026d9;
+  color: #ffe49c;
+  border-color: #ffce78;
+}
+.festival-game .pizzeria-entrance__quick-info dt,
+.festival-game .pizzeria-detail-fact small {
+  color: var(--quiet);
+}
+.festival-game .pizzeria-entrance__quick-info dd,
+.festival-game .pizzeria-detail-fact :is(strong, a) {
+  color: var(--letter);
+}
+.festival-game .pizzeria-detail-fact > span,
+.festival-game .pizzeria-booking-status {
+  background: #443548;
+  color: #ffe0aa;
+  border-color: var(--edge);
+}
+.festival-game .pizzeria-detail-link {
+  color: #ffcf82;
+}
+.festival-game .dinner-table-scene__official-badge {
+  inset: 3% 3% auto auto;
+  width: 8%;
+  height: auto;
+  background: none;
+  box-shadow: none;
+}
+.festival-game .dinner-table-scene__actor {
+  right: 1%;
+  bottom: 1%;
+  width: 18%;
+}
+.festival-game .pizzeria-edit-view__art {
+  border: 2px solid var(--edge);
+  border-radius: 16px;
+  background-size: cover;
+  box-shadow: var(--relief);
+}
+.festival-game .pizzeria-edit-view__art span {
+  inset: auto 4% 5%;
+  background: #291d31e8;
+  color: var(--letter);
+  border-radius: 7px;
+  padding: 5px;
+  font: 900 clamp(11px, 1.4vw, 18px) var(--game-body);
+}
+.festival-game .dinner-table-scene__dialog {
+  background: var(--enamel);
+  color: var(--letter);
+  border: 1px solid var(--edge);
+  box-shadow:
+    0 22px 55px #0d091bd9,
+    inset 0 2px #e9c7e324;
+}
+.festival-game .dinner-table-scene__dialog[data-panel='menu'] {
+  background: var(--enamel-teal);
+}
+.festival-game .dinner-table-scene__dialog h3,
+.festival-game .dinner-table-scene__rating strong {
+  color: var(--letter);
+}
+.festival-game .dinner-table-scene__dialog > .section-kicker,
+.festival-game .dinner-table-scene__scores b,
+.festival-game .dinner-table-scene__notebook output {
+  color: var(--accent);
+}
+.festival-game
+  :is(
+    .dinner-table-scene__empty,
+    .dinner-table-scene__scores span,
+    .dinner-table-scene__notes time,
+    .dinner-table-scene__rating,
+    .pizzeria-review-card > div:first-child > p:last-child,
+    .pizzeria-review-card__score span,
+    .pizzeria-detail-empty p
+  ) {
+  color: var(--quiet);
+}
+.festival-game
+  :is(
+    .dinner-table-scene__dialog blockquote,
+    .pizzeria-detail-note,
+    .pizzeria-review-card blockquote
+  ) {
+  color: var(--quiet);
+  background: var(--inset);
+  border-color: #bd875d;
+}
+.festival-game .pizzeria-detail-note :is(small, p) {
+  color: var(--quiet);
+}
+.festival-game .pizzeria-review-card__score strong {
+  color: var(--accent);
+}
+/* Progress, agenda and restaurant tickets. */
+.festival-game .edition-ribbon,
+.festival-game .pizzeria-review-card {
+  background: var(--enamel-teal);
+}
+.festival-game
+  :is(
+    .edition-ribbon__stage-top strong,
+    .edition-ribbon__stages li.is-complete .edition-ribbon__stage-top strong,
+    .section-heading h2 span
+  ) {
+  color: #ffe09a;
+}
+.festival-game .edition-ribbon__stages small {
+  color: var(--quiet);
+}
+.festival-game .edition-ribbon__seal {
+  background: #214746;
+  color: #bef3da;
+  border-color: #64978a;
+  border-radius: 8px;
+  transform: none;
+}
+.festival-game .edition-ribbon__track {
+  background: #695f72;
+}
+.festival-game :is(.agenda-section, .turn-section, .home-team-strip) {
+  color: var(--letter);
+}
+.festival-game
+  :is(
+    .appointment-line__copy > p,
+    .appointment-line__copy > span,
+    .turn-heading > p:last-child,
+    .quiet-count,
+    .empty-rhythm p,
+    .all-voted p,
+    .vote-spotlight-copy p
+  ) {
+  color: var(--quiet);
+}
+.festival-game
+  :is(
+    .inline-arrow,
+    .history-link,
+    .home-team-strip > button,
+    .appointment-line__aside a,
+    .empty-rhythm button,
+    .vote-spotlight-copy > span
+  ) {
+  color: var(--accent);
+}
+.festival-game :is(.appointment-date-mark, .appointment-line__aside button) {
+  background: #49334a;
+  color: var(--accent);
+  border-color: #7a5b76;
+}
+.festival-game .appointment-date-mark span,
+.festival-game .booking-mark {
+  color: var(--quiet);
+}
+.festival-game .vote-spotlight {
+  background: #273e43;
+  border-color: #546c6d;
+}
+.festival-game .appointments-view .appointment-calendar-card__face {
+  background:
+    linear-gradient(92deg, #292336 0%, #32293bef 40%, #32263a99 65%, #291b2e3b),
+    var(--venue-image) center 49%/cover;
+  border-color: var(--edge);
+  color: var(--letter);
+  box-shadow: var(--relief);
+}
+.festival-game .appointment-calendar-card__date {
+  border-color: #897055;
+  border-radius: 9px;
+  background: #372838;
+  color: var(--accent);
+}
+.festival-game .appointment-calendar-card__date :is(strong, span),
+.festival-game .appointment-calendar-card__open,
+.festival-game .appointment-calendar-card__team {
+  color: var(--accent);
+}
+.festival-game .appointment-calendar-card__copy strong {
+  color: var(--letter);
+  text-shadow: 0 1px 3px #160e1b;
+}
+.festival-game .appointment-calendar-card__copy small,
+.festival-game .calendar-scene-legend,
+.festival-game .calendar-scene-legend span,
+.festival-game .appointment-calendar-empty,
+.festival-game .past-dates summary,
+.festival-game .appointment-calendar-section-heading > span {
+  color: var(--quiet);
+}
+.festival-game .appointment-calendar-card__stamp {
+  background: #362e42;
+  color: #ffe2ab;
+  border-color: #806377;
+}
+.festival-game .appointment-calendar-card__stamp--prenotato {
+  background: #26463f;
+  color: #c6f6d8;
+}
+.festival-game .appointment-calendar-card__footer :is(.booking-mark, a, button),
+.festival-game .next-stop-wheel__actions button {
+  color: #ffd79e;
+}
+.festival-game .appointment-calendar-card__footer .booking-mark--prenotato {
+  color: #b0edcb;
+}
+.festival-game .appointments-view .next-stop-wheel {
+  background:
+    linear-gradient(120deg, #272437ed, #3b263ac9),
+    var(--kitchen-art) center/cover;
+  border-color: var(--edge);
+}
+.festival-game .next-stop-wheel__ticket {
+  background: var(--enamel-teal);
+  border: 1px solid #6b8784;
+  color: var(--letter);
+  box-shadow: var(--relief);
+  border-radius: 12px;
+}
+.festival-game .next-stop-wheel__ticket :is(strong, small) {
+  color: var(--letter);
+}
+.festival-game .next-stop-wheel__ticket-kicker {
+  color: #9de2cc;
+}
+.festival-game .next-stop-wheel__copy h3,
+.festival-game .appointment-calendar-card__copy strong {
+  font-family: var(--game-body);
+  font-weight: 900;
+}
+/* The podium sits on the festival stage. The reward keeps its gold material. */
+.festival-game .votes-view .vote-candidates {
+  background: var(--enamel);
+  border-color: var(--edge);
+  box-shadow: var(--relief);
+}
+.festival-game .votes-view .candidate-row {
+  border-color: #67516c;
+}
+.festival-game .votes-view .candidate-row.is-winner,
+.festival-game .final-winners {
+  background: linear-gradient(115deg, #594134, #392b3c);
+  border: 1px solid #947451;
+  border-radius: 14px;
+}
+.festival-game .final-winners::after {
+  content: none;
+}
+.festival-game .votes-view :is(.candidate-copy h4, .candidate-number),
+.festival-game .final-winners__place > div strong,
+.festival-game .competition-board__leader strong {
+  color: var(--letter);
+}
+.festival-game .vote-availability-note,
+.festival-game .pizzeria-review-card__waiting {
+  color: var(--quiet);
+}
+.festival-game .vote-availability-note--own {
+  color: #ffb39d;
+}
+.festival-game .votes-view .candidate-copy :is(span, p),
+.festival-game .candidate-average small,
+.festival-game .competition-board__heading > div:first-child > p:last-child,
+.festival-game .competition-board__count span,
+.festival-game .competition-board__leader,
+.festival-game .final-winners__copy > p:last-child,
+.festival-game .final-winners__place > div span,
+.festival-game .vote-details,
+.festival-game .vote-details p span {
+  color: var(--quiet);
+}
+.festival-game
+  :is(
+    .candidate-average strong,
+    .competition-board__count strong,
+    .final-winners__copy h3,
+    .final-winners__score,
+    .vote-details summary
+  ) {
+  color: var(--accent);
+}
+.site-shell.festival-game .votes-view .candidate-vote:disabled {
+  background: #312a3a;
+  color: #dbcddf;
+  border-color: #68576f;
+  opacity: 1;
+}
+.site-shell.festival-game .votes-view .candidate-vote.is-done {
+  background: #28423d;
+  color: #bdebd2;
+  border-color: #658c78;
+}
+.festival-game .competition-board__scene {
+  border-radius: 16px;
+  box-shadow: 0 4px #100e19;
+}
+.festival-game .competition-board__scene::before {
+  background: linear-gradient(0deg, #25102050, transparent 65%);
+}
+.festival-game .competition-board__podium-block {
+  background: linear-gradient(155deg, #4e4556, #342b3b);
+  border-color: #897484;
+}
+.festival-game
+  .competition-board__podium-slot--1
+  .competition-board__podium-block {
+  background: linear-gradient(150deg, #634936, #45313b);
+  border-color: #cba363;
+}
+.festival-game
+  .competition-board__podium-block
+  :is(strong, b, small, .competition-board__podium-places span) {
+  color: var(--letter);
+}
+.festival-game .competition-board__podium-block > b,
+.festival-game .competition-board__podium-rank {
+  color: #ffda7b;
+}
+.festival-game .competition-board__podium-rank {
+  background: #503c46;
+  border-color: #ccac76;
+}
+.festival-game
+  .competition-board__podium-slot--1
+  .competition-board__podium-rank {
+  background: #f8c35c;
+  color: #482b1a;
+}
+.festival-game .competition-board__waiting {
+  background: #2c1e30d4;
+}
+.festival-game .competition-board__progress::-webkit-progress-bar {
+  background: #53455e;
+}
+/* Album binding and mounted pictures. */
+.festival-game .history-album {
+  background: linear-gradient(135deg, #53354b, #352739 64%);
+  border: 2px solid #826174;
+  box-shadow:
+    inset 0 0 0 5px #382939,
+    inset 0 0 0 6px #87687d59,
+    var(--relief);
+}
+.festival-game .history-album::before {
+  background: #9f779333;
+}
+.festival-game .history-album::after {
+  border-color: #9980964d;
+}
+.festival-game .history-album__topline,
+.festival-game .history-album__topline strong,
+.festival-game .history-memory__scores b,
+.festival-game .history-memory__score,
+.festival-game .history-memory__seal {
+  color: var(--accent);
+}
+.festival-game .history-album__empty-page > strong,
+.festival-game .history-memory__heading h3 {
+  color: var(--letter);
+}
+.festival-game .history-album__empty-page > p,
+.festival-game .history-memory__heading :is(div, p, time),
+.festival-game .history-memory__scores span,
+.festival-game .history-memory__score span,
+.festival-game .history-memory footer {
+  color: var(--quiet);
+}
+.festival-game .history-album__empty-page > button {
+  background: #3c3044;
+  color: #ffda9d;
+  border-color: #8d6c75;
+}
+.festival-game .history-memory {
+  background: var(--enamel);
+  border-color: #70596c;
+  box-shadow: var(--relief);
+}
+.festival-game :is(.history-memory__photo, .history-album__empty-photo) {
+  border: 3px solid #796477;
+  border-radius: 9px;
+}
+.festival-game .history-memory__photo {
+  background-size: cover;
+  background-position: center 52%;
+}
+.festival-game .history-memory__photo::before {
+  background: linear-gradient(0deg, #140b1d88, transparent 66%);
+}
+.festival-game .history-memory__note {
+  background: var(--inset);
+  color: var(--quiet);
+  border: 1px solid var(--edge);
+  font-family: var(--game-body);
+  border-radius: 8px;
+}
+.festival-game .history-memory__seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+/* The ballot is a game object with a brass clip, a teal enamel face and five inset controls. */
+.festival-game .judgment-board {
+  aspect-ratio: auto;
+  padding: clamp(37px, 5vw, 62px) clamp(15px, 3.1vw, 38px) 20px;
+  border: 2px solid #aa8862;
+  border-radius: 22px;
+  background:
+    radial-gradient(at 80% 0%, #44615f, transparent 60%),
+    linear-gradient(140deg, #354753, #232c38 78%);
+  box-shadow:
+    inset 0 0 0 3px #26313d,
+    inset 0 0 0 4px #738176,
+    0 5px #322734,
+    0 14px 25px #190f205e;
+}
+.festival-game .judgment-board__clip {
+  width: 24%;
+  left: 38%;
+  top: -2%;
+}
+.festival-game .judgment-paper-content {
+  position: relative;
+  inset: auto;
+  gap: 12px;
+}
+.festival-game .judgment-heading {
+  min-height: 0;
+  padding: 0 4px 12px;
+  border-bottom: 1px solid #83968b6e;
+}
+.festival-game .judgment-heading h1 {
+  color: var(--letter);
+  font-style: normal;
+}
+.festival-game .judgment-heading p,
+.festival-game .judgment-rating__body > output,
+.festival-game .judgment-companion__bubble span {
+  color: var(--accent);
+}
+.festival-game .judgment-heading > span,
+.festival-game .judgment-rating__label span small,
+.festival-game .judgment-rating__body > output small,
+.festival-game .judgment-rating__scale,
+.festival-game .judgment-note small {
+  color: #cbdbd9;
+}
+.festival-game .judgment-ratings {
+  gap: 6px;
+}
+.festival-game .judgment-rating {
+  padding: 10px 9px;
+  background: #202b35;
+  border: 1px solid #53656e;
+  border-radius: 12px;
+}
+.festival-game .judgment-rating.is-complete {
+  background: #253b3b;
+  border-color: #71938b;
+}
+.festival-game .judgment-rating__label,
+.festival-game .judgment-note,
+.festival-game .judgment-note textarea {
+  color: var(--letter);
+  font-family: var(--game-body);
+}
+.festival-game .judgment-rating__step {
+  color: #ffe0a2;
+  background: #3a4650;
+  border-color: #829491;
+}
+.festival-game
+  .judgment-rating__control
+  input[type='range']::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    #f4b953 var(--rating-progress),
+    #60656f var(--rating-progress)
+  );
+}
+.festival-game
+  .judgment-rating__control
+  input[type='range']::-webkit-slider-thumb {
+  background: #ffd57c;
+  border-color: #ad793c;
+}
+.festival-game .judgment-note {
+  border: 1px solid #637477;
+  border-radius: 12px;
+  background: #202931;
+}
+.festival-game .judgment-note textarea::placeholder {
+  color: #b6c4c5;
+}
+.festival-game .judgment-form-progress {
+  background: #251e30;
+  border: 1px solid var(--edge);
+}
+.festival-game .judgment-companion__bubble {
+  color: var(--letter);
+  background: #382b3f;
+  border-color: #947380;
+}
+.festival-game .judgment-companion__bubble::after {
+  background: #382b3f;
+  border-color: #947380;
+}
+.festival-game .judgment-companion__bubble strong {
+  font-family: var(--game-body);
+}
+@media (max-width: 540px) {
+  .festival-game .judgment-board {
+    padding: 38px 12px 15px;
+    border-radius: 16px;
+  }
+  .festival-game .judgment-paper-content {
+    gap: 6px;
+  }
+  .festival-game .judgment-rating {
+    padding: 6px 8px;
+  }
+  .festival-game .judgment-ratings {
+    padding-bottom: 0;
+  }
+}
+
+.festival-game .pizzeria-review-card__score,
+.festival-game .dinner-table-scene__rating {
+  color: var(--quiet);
+  background: #263b40;
+  border: 1px solid #698483;
+  border-radius: 12px;
+}
+.festival-game .dinner-table-scene__rating strong {
+  color: var(--accent);
+}
+.site-shell.festival-game .team-setup--backstage .button-outline {
+  color: #c9f2e1;
+  background: var(--enamel-teal);
+  border-color: #769891;
+}
+.festival-game .appointments-view .past-dates summary :is(span),
+.festival-game .appointments-view .past-dates summary::after {
+  color: var(--accent);
+}
+.festival-game .section-heading--line h2 span {
+  color: #ffdc97;
+  background: #4b3546;
+  border: 1px solid #9a745c;
+}
+.festival-game .vote-spotlight {
+  padding: 11px;
+  border: 1px solid #526969;
+  border-radius: 12px;
+}
+.festival-game .vote-spotlight > button {
+  min-height: 36px;
+  padding-inline: 12px;
+  border-radius: 10px;
+  background: #ffc750;
+  color: #49300f;
+  box-shadow:
+    inset 0 1px #ffe297,
+    0 2px #97602e;
+}
+@media (max-width: 680px) {
+  .festival-game .agenda-section .section-heading--line {
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .festival-game .turn-heading > p:last-child {
+    justify-self: start;
+    text-align: left;
+  }
+}
+@media (min-width: 920px) {
+  .festival-game .pizzeria-entrance__layout {
+    max-width: 1190px;
+    margin-inline: auto;
+  }
+  .festival-game .pizzeria-entrance__frame {
+    width: min(100%, max(440px, calc(100svh - 225px)));
+    justify-self: end;
+  }
+  .festival-game .pizzeria-detail-view {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 16px 30px;
+    align-items: start;
+    max-width: 1190px;
+    margin-inline: auto;
+  }
+  .festival-game .pizzeria-detail-view__heading {
+    grid-column: 1/-1;
+    margin-bottom: 0;
+  }
+  .festival-game .pizzeria-detail-view .dinner-table-scene__stage {
+    width: min(100%, max(420px, calc(100svh - 340px)));
+  }
+  .festival-game .pizzeria-detail-view .pizzeria-detail-view__grid {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0;
+  }
+  .festival-game .history-memory:only-child {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.06fr) minmax(0, 1fr);
+    align-content: center;
+    align-items: center;
+    gap: 10px 18px;
+    padding: 16px;
+  }
+  .festival-game .history-memory:only-child .history-memory__photo {
+    grid-row: 1/5;
+    align-self: stretch;
+    height: auto;
+    min-height: 225px;
+  }
+  .festival-game
+    .history-memory:only-child
+    :is(
+      .history-memory__caption,
+      .history-memory__scores,
+      .history-memory__note,
+      footer
+    ) {
+    margin: 0;
+  }
+}
+
+.festival-game .appointment-calendar-empty {
+  padding: 16px;
+  background: var(--inset);
+  border: 1px dashed #917491;
+  border-radius: 12px;
+}
+.festival-game .quiet-empty {
+  color: var(--quiet);
+  border-color: var(--edge);
+}

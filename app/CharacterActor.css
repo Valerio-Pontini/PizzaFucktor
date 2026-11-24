@@ -1,0 +1,88 @@
+.character-actor {
+  --actor-accent: #8b3f2f;
+  position: relative;
+  display: block;
+  width: clamp(106px, 14vw, 176px);
+  aspect-ratio: 1122 / 1402;
+  pointer-events: none;
+}
+
+.character-actor__ground {
+  position: absolute;
+  right: 9%;
+  bottom: 2%;
+  left: 9%;
+  height: 9%;
+  border-radius: 50%;
+  background: rgba(49, 34, 23, .17);
+  filter: blur(6px);
+  animation: character-shadow 3.8s ease-in-out infinite;
+}
+
+.character-actor__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: var(--actor-shadow, drop-shadow(0 10px 9px rgba(54, 34, 21, .2)));
+  transform-origin: 50% 93%;
+  user-select: none;
+  animation: character-idle 3.8s ease-in-out infinite;
+}
+
+.character-actor--compact { width: clamp(58px, 9vw, 116px); }
+.character-actor--cheer .character-actor__image { animation-name: character-cheer; animation-duration: 2.8s; }
+.character-actor--peek .character-actor__image { animation-name: character-peek; animation-duration: 4.4s; }
+.character-actor--tasting .character-actor__image { animation-name: character-tasting; animation-duration: 3.4s; }
+.character-actor--hero .character-actor__image { animation-name: character-hero; animation-duration: 3.2s; }
+.character-actor--surprise .character-actor__image { animation-name: character-surprise; animation-duration: 3s; }
+.character-actor--cheer .character-actor__ground { animation-duration: 2.8s; }
+.character-actor--peek .character-actor__ground { animation-duration: 4.4s; }
+.character-actor--tasting .character-actor__ground { animation-duration: 3.4s; }
+.character-actor--hero .character-actor__ground { animation-duration: 3.2s; }
+.character-actor--surprise .character-actor__ground { animation-duration: 3s; }
+
+@keyframes character-idle {
+  0%, 100% { transform: translateY(0) rotate(-.6deg); }
+  50% { transform: translateY(-4px) rotate(.6deg); }
+}
+
+@keyframes character-cheer {
+  0%, 100% { transform: translateY(0) rotate(-1deg) scale(1); }
+  45% { transform: translateY(-8px) rotate(1.2deg) scale(1.015); }
+  65% { transform: translateY(-3px) rotate(-.4deg) scale(1); }
+}
+
+@keyframes character-peek {
+  0%, 100% { transform: translate(0, 0) rotate(-.5deg); }
+  48% { transform: translate(4px, -3px) rotate(1deg); }
+  58% { transform: translate(-1px, -1px) rotate(-.3deg); }
+}
+
+@keyframes character-tasting {
+  0%, 100% { transform: translateY(0) rotate(-.4deg); }
+  40% { transform: translateY(-3px) rotate(.4deg); }
+  54% { transform: translateY(1px) rotate(-.7deg); }
+}
+
+@keyframes character-hero {
+  0%, 100% { transform: translateY(0) rotate(-.4deg) scale(1); }
+  50% { transform: translateY(-5px) rotate(.5deg) scale(1.01); }
+}
+
+@keyframes character-surprise {
+  0%, 100% { transform: translateY(0) rotate(-.4deg) scale(1); }
+  42% { transform: translateY(-5px) rotate(1deg) scale(1.018); }
+  58% { transform: translateY(-2px) rotate(-.5deg) scale(1); }
+}
+
+@keyframes character-shadow {
+  0%, 100% { opacity: .72; transform: scaleX(1); }
+  50% { opacity: .45; transform: scaleX(.84); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .character-actor__image, .character-actor__ground { animation: none !important; }
+}

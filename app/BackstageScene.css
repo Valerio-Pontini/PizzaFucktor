@@ -1,0 +1,114 @@
+.backstage-scene {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: clamp(320px, 30vw, 430px);
+  align-content: space-between;
+  gap: 22px;
+  padding: clamp(12px, 2vw, 24px);
+  overflow: hidden;
+  border: 4px solid #f9ebce;
+  border-radius: 30px 30px 17px 17px;
+  background: #b96743;
+  box-shadow: 0 0 0 1px #b9a578, 0 3px 0 1px #c3ac83, 0 14px 28px -16px #55371885;
+}
+
+.backstage-scene__background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 34% center;
+  animation: backstage-arrive .65s ease-out both;
+}
+
+.backstage-scene__light {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 43%, #59321b12 63%, #4d2a16bb);
+  pointer-events: none;
+}
+.backstage-scene__selection {
+  justify-self: end;
+  display: grid;
+  width: min(100%, 252px);
+  gap: 4px;
+  padding: 12px 15px;
+  border: 1px solid #d5bd97;
+  border-left: 3px solid #c83f29;
+  border-radius: 9px;
+  color: #32291f;
+  background: #fff7e7;
+  box-shadow: 0 5px 10px #64361f33;
+  overflow-wrap: anywhere;
+}
+.backstage-scene__selection span { color: #8d3826; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.backstage-scene__selection strong { font: 800 clamp(17px, 2vw, 23px)/1.05 Outfit, system-ui, sans-serif; letter-spacing: -.035em; }
+.backstage-scene__selection small { color: #66523e; font-size: 12px; line-height: 1.35; }
+
+.backstage-scene__actors { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: end; gap: 5px; }
+.backstage-scene__actor {
+  display: grid;
+  min-width: 0;
+  align-content: end;
+  justify-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  color: #32291f;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+.backstage-scene__actor .character-actor {
+  width: min(100%, 133px);
+  transition: transform .2s ease, filter .2s ease, opacity .2s ease;
+}
+.backstage-scene__actor.is-selected .character-actor { transform: translateY(-5px) scale(1.05); }
+.backstage-scene__actor.is-taken { cursor: not-allowed; }
+.backstage-scene__actor.is-taken .character-actor { opacity: .72; filter: saturate(.5); }
+.backstage-scene__actor:focus-visible { outline: 3px solid #fff3c3; outline-offset: 4px; }
+.backstage-scene__actor-label {
+  display: grid;
+  width: 100%;
+  max-width: 115px;
+  gap: 2px;
+  padding: 6px 2px;
+  border: 1px solid #dcc29a;
+  border-radius: 7px;
+  background: #fff7e7;
+  box-shadow: 0 3px 5px #4d2a163b;
+  text-align: center;
+}
+.backstage-scene__actor-label strong { font-size: clamp(9px, 1.25vw, 13px); font-weight: 800; }
+.backstage-scene__actor-label small { color: #725339; font-size: clamp(8px, 1.1vw, 10px); font-weight: 700; }
+.backstage-scene__actor.is-selected .backstage-scene__actor-label { border-color: #a63322; color: #fff8e8; background: #bd402b; }
+.backstage-scene__actor.is-selected .backstage-scene__actor-label small { color: inherit; }
+.backstage-scene__actor.is-taken .backstage-scene__actor-label { background: #e8ddca; }
+@media (hover: hover) { .backstage-scene__actor:not(:disabled):hover .character-actor { transform: translateY(-7px) scale(1.05); } }
+
+.backstage-scene__steam { position: absolute; z-index: -1; right: 26%; bottom: 18%; width: 26px; height: 90px; opacity: .32; pointer-events: none; }
+.backstage-scene__steam i { position: absolute; bottom: 0; width: 17px; height: 48px; border: 3px solid; border-color: #fffadeb8 transparent transparent #fffade73; border-radius: 50%; filter: blur(1px); animation: backstage-steam 3.9s ease-in-out infinite; }
+.backstage-scene__steam i:nth-child(1) { left: 0; }
+.backstage-scene__steam i:nth-child(2) { left: 11px; height: 58px; animation-delay: .8s; }
+.backstage-scene__steam i:nth-child(3) { left: 18px; height: 40px; animation-delay: 1.5s; }
+
+@keyframes backstage-arrive { from { opacity: .5; transform: scale(1.02); } }
+@keyframes backstage-steam { 0%, 100% { opacity: .25; transform: translateY(7px) rotate(-5deg); } 50% { opacity: .75; transform: translateY(-10px) rotate(7deg); } }
+
+@media (max-width: 680px) {
+  .backstage-scene { min-height: 264px; padding: 12px 7px 9px; border-radius: 21px 21px 12px 12px; }
+  .backstage-scene__selection { width: min(200px, 68%); padding: 8px 10px; }
+  .backstage-scene__selection small { font-size: 11px; }
+  .backstage-scene__actors { gap: 4px; }
+  .backstage-scene__actor-label { padding: 5px 1px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backstage-scene__background, .backstage-scene__steam i { animation: none; }
+  .backstage-scene__actor .character-actor { transition: none; }
+}

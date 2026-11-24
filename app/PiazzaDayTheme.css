@@ -1,0 +1,368 @@
+/* Alternate daytime art direction: sunlit piazza, trattoria paper, tomato and basil. */
+body:has(.site-shell.festival-game[data-theme="giorno"]) {
+  background: #f2e7d5;
+}
+
+.site-shell.festival-game[data-theme="giorno"] {
+  color-scheme: light;
+  --game-base: #f2e7d5;
+  --game-panel: #fff9ed;
+  --game-rim: #d7bea0;
+  --game-cream: #312f28;
+  --game-soft: #686153;
+  --game-gold: #a94b32;
+  --game-coral: #973a2d;
+  --game-display: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --game-night:
+    radial-gradient(ellipse at 82% 7%, #f4d9956b, transparent 47%),
+    radial-gradient(ellipse at 5% 65%, #dce7cd8a, transparent 52%),
+    #f3eadb;
+  --ink: #312f28;
+  --ink-soft: #666052;
+  --tomato-dark: #9c3f2e;
+  --ux-rule: #cdb99d;
+  --ux-rule-soft: #e0cfb5;
+  --ux-wash: #fff9edb8;
+  --enamel: linear-gradient(145deg, #fffaf0, #f3e8d7 72%);
+  --enamel-teal: linear-gradient(145deg, #e8efdf, #dbe5d2 72%);
+  --edge: #d3bea0;
+  --inset: #fffdf7;
+  --letter: #353229;
+  --quiet: #6a6256;
+  --accent: #a54831;
+  --relief: inset 0 1px #ffffff, 0 2px #d5c1a4, 0 12px 24px -16px #8e674a;
+  --kitchen-art: url('/assets/festival/cucina-giorno-1400.jpg');
+}
+
+.site-shell.festival-game[data-theme="giorno"] .topbar {
+  color: #322f28;
+  background: #fffaf0ed;
+  border-bottom-color: #d8c5a7;
+  box-shadow: 0 4px 18px #73583a12;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .brand b,
+.site-shell.festival-game[data-theme="giorno"] .footer-brand {
+  color: #a44130;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .account-avatar {
+  color: #713a2b;
+  background: linear-gradient(145deg, #f8dfaf, #ebc990);
+  border-color: #d6b987;
+}
+
+.site-shell.festival-game[data-theme="giorno"] :is(.account-label, .signout-label) {
+  color: #55483b;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .desktop-nav button {
+  color: #645a4b;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .desktop-nav button:is(.is-current, :hover) {
+  color: #8e392b;
+  background: #f2e3ca;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  min-height: 35px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 12px;
+  border: 1px solid #806b75;
+  border-radius: 999px;
+  color: #fff0d4;
+  background: #332b40;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: color .18s, background .18s, border-color .18s, transform .18s;
+}
+
+.theme-toggle:hover { transform: translateY(-1px); }
+.theme-toggle > span { font-size: 16px; line-height: 1; }
+.theme-toggle:focus-visible { outline: 3px solid #e9a743; outline-offset: 3px; }
+
+.site-shell.festival-game[data-theme="giorno"] .theme-toggle {
+  color: #713a2b;
+  border-color: #d2b48a;
+  background: #f9ead0;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .scene-shell {
+  color: #312f28;
+  background: var(--game-night);
+}
+
+.site-shell.festival-game[data-theme="giorno"] :is(.scene-shell__chapter, .scene-shell__progress small) {
+  color: #79634a;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .scene-shell__route strong {
+  color: #302f28;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .scene-shell__progress {
+  color: #a64b31;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .scene-shell__back {
+  color: #624632;
+  border-color: #d5bea0;
+  background: #fff8e9;
+  box-shadow: 0 2px #dbc8aa;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .site-footer {
+  border-color: #d8c6aa;
+  color: #756a58;
+}
+
+.site-shell.festival-game[data-theme="giorno"] :is(.control-heading, .page-intro, .view-heading, .home-pizzeria-map__heading) {
+  color: #302f28;
+}
+
+.site-shell.festival-game[data-theme="giorno"] :is(.control-heading h1, .view-heading h2, .home-pizzeria-map__heading h2, .section-heading h2, .turn-heading h2) {
+  color: #302f28;
+  font-family: var(--game-display);
+}
+
+.site-shell.festival-game[data-theme="giorno"] :is(.control-heading > div > p:not(.eyebrow), .home-pizzeria-map__heading p, .view-heading > p:not(.section-kicker), .loading-card) {
+  color: #655f53;
+}
+
+.site-shell.festival-game[data-theme="giorno"] :is(.control-heading .eyebrow, .section-kicker, .form-section-label) {
+  color: #9b5638;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .edition-stamp {
+  color: #8e402d;
+  border-color: #d6bc96;
+  background: radial-gradient(circle at 30% 24%, #fffaf0, #f0dfbf);
+  box-shadow: 0 4px #cfb38b, 0 10px 20px #78583419;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .edition-stamp :is(small, span) { color: #705e46; }
+
+.site-shell.festival-game[data-theme="giorno"] .home-pizzeria-map .home-pizzeria-map__art {
+  border-color: #c9ae86;
+  box-shadow: 0 5px #d0b895, 0 12px 26px #7a593025;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .home-pizzeria-map__art::before {
+  background: radial-gradient(ellipse at 53% 60%, #f4d38a52, #ebbd6d18 52%, transparent 73%);
+}
+
+.site-shell.festival-game[data-theme="giorno"] .home-pizzeria-map__stops button {
+  color: #3a352c;
+  background: #fff9ed;
+  border-color: #dfccb0;
+  box-shadow: 0 2px #dec9a8;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .home-pizzeria-map__stops button:hover {
+  background: #fff3db;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .home-pizzeria-map__stops :is(small, .home-pizzeria-map__stop-arrow) {
+  color: #7d6347;
+}
+
+.site-shell.festival-game[data-theme="giorno"] :is(
+  .edition-ribbon,
+  .home-rhythm,
+  .home-team-strip,
+  .competition-board,
+  .scene-shell--appointments .appointments-view,
+  .scene-shell--pizzeria .pizzeria-form,
+  .pizzeria-entrance .pizzeria-entrance__info,
+  .pizzeria-detail-card,
+  .pizzeria-review-card,
+  .pizzeria-detail-empty,
+  .votes-view .vote-candidates,
+  .history-album
+) {
+  color: #343128;
+  border-color: #d4bea0;
+  background-color: #fff8e9;
+  box-shadow: 0 3px #ddc9a9, 0 12px 25px #77563814;
+}
+
+.site-shell.festival-game[data-theme="giorno"] :is(.home-team-strip h2, .home-team-strip p, .edition-ribbon__stage-top strong) {
+  color: #373229;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .appointments-scene-heading {
+  background:
+    linear-gradient(90deg, #fff7e9f2, #fff7e9dc 65%, #fff7e9a8),
+    var(--kitchen-art) 50% 48% / cover;
+  box-shadow: 0 3px #dbc6a3;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .appointments-scene-heading :is(h2, h2 em) { color: #373128; }
+.site-shell.festival-game[data-theme="giorno"] .appointments-scene-heading h2 em { color: #9f442e; }
+.site-shell.festival-game[data-theme="giorno"] .appointments-scene-heading :is(.section-kicker, .view-heading > p) { color: #6b604f; }
+.site-shell.festival-game[data-theme="giorno"] .appointments-scene-count { background: #f2dfbd; }
+.site-shell.festival-game[data-theme="giorno"] .appointments-scene-count :is(span, strong) { color: #723d2b; }
+
+.site-shell.festival-game[data-theme="giorno"] .appointment-calendar-card__face {
+  color: #373229;
+  border-color: #d6bd97;
+  background: linear-gradient(135deg, #fffaf0, #f4e7d0);
+  box-shadow: inset 0 2px #fffef8, 0 9px 17px #71533214;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .appointment-calendar-card__face::before { border-color: #d8c19d; }
+.site-shell.festival-game[data-theme="giorno"] .appointment-calendar-card__date { color: #9c3f2e; background: #fffcf3; }
+.site-shell.festival-game[data-theme="giorno"] .appointment-calendar-card__date span { color: #796245; }
+.site-shell.festival-game[data-theme="giorno"] .appointment-calendar-card__copy :is(strong, small) { color: #383329; }
+.site-shell.festival-game[data-theme="giorno"] .appointment-calendar-card__team { color: #98613c; }
+.site-shell.festival-game[data-theme="giorno"] .appointment-calendar-card__footer { color: #6d6253; }
+
+.site-shell.festival-game[data-theme="giorno"] :is(.form-card, .team-setup--backstage .setup-heading, .pizzeria-detail-view__heading) {
+  color: #343128;
+  border-color: #d4bea0;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .team-setup--backstage {
+  --setup-paper: #fff8e9;
+  --setup-ink: #343128;
+  --setup-border: #d4bea0;
+  --setup-tomato: #a3422f;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .team-setup--backstage :is(.form-card, .setup-heading) {
+  box-shadow: 0 3px #ddc9a9, 0 11px 21px #77563812;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .team-setup--backstage :is(.form-card > p, .setup-heading > p, .privacy-note, .team-badge-picker > p, .team-badge-option small) { color: #6e6658; }
+.site-shell.festival-game[data-theme="giorno"] .team-setup--backstage :is(.field > span, .team-badge-picker legend) { color: #493e31; }
+
+.site-shell.festival-game[data-theme="giorno"] .team-badge-option,
+.site-shell.festival-game[data-theme="giorno"] .backstage-scene__actor-label {
+  color: #39332a;
+  border-color: #dfceb3;
+  background: #fff9ec;
+  box-shadow: 0 2px #dbc7a7;
+}
+
+.site-shell.festival-game[data-theme="giorno"] :is(.team-badge-option.is-selected, .backstage-scene__actor.is-selected .backstage-scene__actor-label) {
+  color: #793c2b;
+  border-color: #c76b43;
+  background: #f8e4c3;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .backstage-scene__background { filter: none; }
+.site-shell.festival-game[data-theme="giorno"] .backstage-scene { border-color: #e8d3ab; box-shadow: 0 4px #d6bc91, 0 15px 26px #75543520; }
+
+.site-shell.festival-game[data-theme="giorno"] :is(.field, .team-board-scene__name) :is(input, textarea, select) {
+  color: #353128;
+  border-color: #d9c5a7;
+  background-color: #fffdf7;
+  box-shadow: inset 0 1px 3px #785b3210;
+}
+
+.site-shell.festival-game[data-theme="giorno"] :is(.field > span, .form-footer > span, .privacy-note, .reservation-details summary small) { color: #62594b; }
+.site-shell.festival-game[data-theme="giorno"] .pizzeria-form .form-section-label { color: #965638; }
+.site-shell.festival-game[data-theme="giorno"] .pizzeria-form .form-section-label i { background: #d9c6a8; }
+.site-shell.festival-game[data-theme="giorno"] .reservation-details { border-color: #ddc9a9; background: #f8eedc; }
+.site-shell.festival-game[data-theme="giorno"] .reservation-details summary :is(b, i) { color: #9e452f; }
+
+.site-shell.festival-game[data-theme="giorno"] .button.button-primary,
+.site-shell.festival-game[data-theme="giorno"] .team-setup--backstage .button-primary,
+.site-shell.festival-game[data-theme="giorno"] .judgment-submit:not(:disabled),
+.site-shell.festival-game[data-theme="giorno"] .votes-view .candidate-vote:not(:disabled) {
+  color: #fff8e9;
+  border-color: #a94832;
+  background: linear-gradient(#bf5938, #9d3e2d);
+  box-shadow: inset 0 1px #e39a70, 0 3px #763324;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .button-outline {
+  color: #46392c;
+  border-color: #d1b996;
+  background: #fff8e9;
+  box-shadow: 0 2px #d6c09f;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .button-outline:hover { background: #f8ebd4; }
+.site-shell.festival-game[data-theme="giorno"] .team-board-scene__backdrop {
+  filter: saturate(.92);
+  background:
+    linear-gradient(105deg, #fff1d41c, #fff0d451),
+    var(--kitchen-art) center / cover;
+}
+.site-shell.festival-game[data-theme="giorno"] .team-board-scene__intro { color: #39342b; border-color: #d2ba92; background: linear-gradient(145deg, #fff8e9, #e8efd9); box-shadow: 0 3px #d0b78e, 0 9px 20px #44301d20; }
+.site-shell.festival-game[data-theme="giorno"] .team-board-scene__intro :is(h2, .section-kicker, .team-board-scene__status, .team-board-scene__status small),
+.site-shell.festival-game[data-theme="giorno"] .team-board-scene__intro > p:not(.section-kicker) { color: #4b4336; }
+.site-shell.festival-game[data-theme="giorno"] .team-board-scene__intro h2 em { color: #a44730; }
+.site-shell.festival-game[data-theme="giorno"] .team-board-scene__intro-mark { background: #f3dfb5; }
+.site-shell.festival-game[data-theme="giorno"] .team-board-scene__fridge { color: #3b352a; border-color: #ccb58f; background: linear-gradient(145deg, #fffdf4, #efe3cb); }
+.site-shell.festival-game[data-theme="giorno"] .team-board-scene__member,
+.site-shell.festival-game[data-theme="giorno"] .team-board-scene__member.is-pending,
+.site-shell.festival-game[data-theme="giorno"] .team-board-scene__pizzeria { color: #39342c; border-color: #d2bea0; background: #f8eedc; }
+
+.site-shell.festival-game[data-theme="giorno"] .votes-view .vote-candidates,
+.site-shell.festival-game[data-theme="giorno"] .history-album { color: #373229; background-color: #fff8e9; }
+.site-shell.festival-game[data-theme="giorno"] .vote-candidates h3 { color: #fff7e8; background: #8b4a35; }
+.site-shell.festival-game[data-theme="giorno"] .candidate-row { color: #39342c; border-color: #ddc9aa; background: #fffaf0; }
+.site-shell.festival-game[data-theme="giorno"] :is(.candidate-copy h4, .candidate-number, .final-winners__place > div strong, .competition-board__leader strong) { color: #753d2b; }
+.site-shell.festival-game[data-theme="giorno"] :is(.candidate-copy span, .candidate-copy p, .candidate-average small, .vote-details, .vote-details p span) { color: #6b6255; }
+.site-shell.festival-game[data-theme="giorno"] .candidate-row.is-winner { border-color: #cba663; background: #fbf0d6; }
+.site-shell.festival-game[data-theme="giorno"] .candidate-vote.is-done { color: #56654a; background: #e5eddb; }
+
+.site-shell.festival-game[data-theme="giorno"] :is(.team-board-scene, .pizzeria-entrance__stage, .dinner-table-scene__stage, .judgment-stage) {
+  border-color: #d5bd98;
+  box-shadow: 0 4px #cdb58f, 0 14px 25px #694c2c1c;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .pizzeria-detail-view__heading { color: #373229; }
+.site-shell.festival-game[data-theme="giorno"] .pizzeria-detail-view__heading :is(.section-kicker, h2) { color: #49392c; }
+.site-shell.festival-game[data-theme="giorno"] .pizzeria-detail-view__heading p:not(.section-kicker) { color: #665d50; }
+.site-shell.festival-game[data-theme="giorno"] .dinner-table-scene__dialog { color: #383229; border-color: #d5bd98; background: #fff8e9; }
+.site-shell.festival-game[data-theme="giorno"] .dinner-table-scene__legend button,
+.site-shell.festival-game[data-theme="giorno"] .dinner-table-scene__hotspot > span { color: #493a2d; border-color: #d5bd98; background: #fff8e9; }
+
+.site-shell.festival-game[data-theme="giorno"] .judgment-stage {
+  background:
+    linear-gradient(100deg, #fff7e9c9, #fff7e978),
+    var(--kitchen-art) center / cover;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .judgment-form-progress { color: #39342c; }
+.site-shell.festival-game[data-theme="giorno"] .judgment-board { color: #38342c; }
+.site-shell.festival-game[data-theme="giorno"] .judgment-rating { border-color: #d7c3a4; background: #fff9ed; }
+.site-shell.festival-game[data-theme="giorno"] .judgment-rating__label strong { color: #373229; }
+.site-shell.festival-game[data-theme="giorno"] .judgment-rating__label small { color: #726757; }
+.site-shell.festival-game[data-theme="giorno"] .judgment-note textarea { color: #373229; border-color: #d7c3a4; background: #fffdf7; }
+
+.site-shell.festival-game[data-theme="giorno"] .mobile-dock {
+  border-color: #d6c19f;
+  background: #fffaf0f5;
+  box-shadow: 0 -3px 15px #775a3817;
+}
+
+.site-shell.festival-game[data-theme="giorno"] .mobile-dock button { color: #665a48; }
+.site-shell.festival-game[data-theme="giorno"] .mobile-dock button.is-current { color: #8f3f2c; }
+.site-shell.festival-game[data-theme="giorno"] .mobile-dock button.is-current > span { background: #f2dfbd; box-shadow: inset 0 1px #fff8e8; }
+
+@media (max-width: 680px) {
+  .theme-toggle { min-height: 33px; gap: 5px; padding-inline: 8px; font-size: 11px; }
+}
+
+@media (max-width: 800px) {
+  .site-shell.festival-game[data-theme="giorno"] { --kitchen-art: url('/assets/festival/cucina-giorno-760.jpg'); }
+}
+
+@media (max-width: 390px) {
+  .site-shell--play .account-label { display: none; }
+}
+
+@media (max-width: 370px) {
+  .theme-toggle { width: 35px; padding: 0; }
+  .theme-toggle > span { font-size: 18px; }
+  .theme-toggle:not(:focus-visible) { font-size: 0; }
+}

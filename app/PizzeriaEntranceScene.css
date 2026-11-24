@@ -1,0 +1,105 @@
+.pizzeria-entrance { min-height: 0; padding-top: 4px; }
+.pizzeria-entrance > .back-link { margin-bottom: 15px; }
+.pizzeria-entrance__layout { display: grid; grid-template-columns: minmax(0,1.45fr) minmax(230px,.8fr); align-items: center; gap: clamp(15px,2.5vw,28px); }
+.pizzeria-entrance__frame { min-width: 0; }
+.pizzeria-entrance__stage { position: relative; width: 100%; aspect-ratio: 1310 / 1201; overflow: hidden; perspective: 1000px; isolation: isolate; container-type: inline-size; border-radius: clamp(10px, 1.6vw, 22px); background: #f5e5d0; box-shadow: 0 12px 30px #754b251d, 0 0 0 1px #8c5a342e; }
+.pizzeria-entrance__world { position: absolute; inset: 0; transform-origin: 50% 61%; transition: transform 1.05s cubic-bezier(.16,.7,.18,1); }
+.pizzeria-entrance__artwork { position: absolute; z-index: 1; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; user-select: none; pointer-events: none; }
+.pizzeria-entrance__world::before {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 25% 52%, #ffb84c47 0%, transparent 16%),
+    radial-gradient(ellipse at 75% 52%, #ffb84c47 0%, transparent 16%),
+    radial-gradient(ellipse at 50% 52%, transparent 42%, #87451b30 100%);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  content: '';
+}
+.pizzeria-entrance__door { position: absolute; z-index: 44; top: 42.9%; display: block; width: 12.2%; height: 35%; object-fit: fill; backface-visibility: hidden; transition: transform .55s cubic-bezier(.4,.05,.2,1); pointer-events: none; }
+.pizzeria-entrance__door--left { left: 37.8%; transform-origin: 0 50%; }
+.pizzeria-entrance__door--right { left: 50%; transform-origin: 100% 50%; }
+.pizzeria-entrance__host { position: absolute; z-index: 50; top: 53%; left: 61%; display: block; width: 30%; height: 39%; object-fit: contain; filter: drop-shadow(0 5px 4px #603c254d); user-select: none; pointer-events: none; }
+.pizzeria-entrance__official-badge { position: absolute; z-index: 51; top: 9.3%; left: 50%; display: block; width: 8.5%; height: auto; aspect-ratio: 1; padding: 1%; box-sizing: border-box; border: 2px solid rgba(247,221,174,.96); border-radius: 50%; background: #fff6de; box-shadow: 0 2px 0 rgba(105,55,30,.32),0 7px 13px rgba(80,45,27,.21); object-fit: contain; transform: translateX(-50%); animation: entrance-badge-settle .55s cubic-bezier(.18,.7,.2,1) .1s both; pointer-events: none; }
+.pizzeria-entrance__sign-copy { position: absolute; z-index: 52; top: 20.2%; left: 50%; display: flex; width: 38%; height: 11.9%; padding: 0 1.5%; box-sizing: border-box; flex-direction: column; align-items: center; justify-content: center; gap: .12cqi; overflow: hidden; color: var(--team-dark,#902a2d); text-align: center; transform: translateX(-50%); }
+.pizzeria-entrance__sign-eyebrow { display: block; max-width: 100%; font-size: clamp(8px,1.15cqi,13px); font-weight: 950; letter-spacing: .14em; line-height: 1; white-space: nowrap; opacity: .86; }
+.pizzeria-entrance__sign-name { display: -webkit-box; width: 100%; max-height: 2.12em; overflow: hidden; color: inherit; font-family: Georgia,'Times New Roman',serif; font-size: clamp(12px,3.15cqi,31px); font-weight: 800; letter-spacing: -.018em; line-height: 1.02; text-align: center; text-shadow: 0 1px 0 rgba(255,248,227,.82); text-wrap: balance; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.pizzeria-entrance__door-hit-area { position: absolute; z-index: 56; top: 42.9%; left: 37.8%; display: grid; width: 24.4%; height: 35%; place-items: center; padding: 0; border: 0; background: transparent; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.pizzeria-entrance__door-hit-area > span { display: grid; width: clamp(27px,4cqi,36px); height: clamp(27px,4cqi,36px); place-items: center; border: 1px solid #fff1c8; border-radius: 50%; background: #fff3d7; box-shadow: 0 2px 7px #40251575, 0 0 0 3px #fcce7e46; color: var(--team-dark,#902a2d); opacity: .9; transition: background .16s ease, opacity .16s ease, transform .16s ease, box-shadow .16s ease; }
+.pizzeria-entrance__door-hit-area > span i { display: block; color: inherit; font-size: clamp(15px,2.2cqi,21px); font-style: normal; line-height: 1; }
+.pizzeria-entrance__door-hit-area:hover > span, .pizzeria-entrance__door-hit-area:focus-visible > span { background: rgba(255,253,245,.96); box-shadow: 0 5px 14px rgba(58,39,24,.28); opacity: 1; transform: scale(1.08); }
+.pizzeria-entrance__door-hit-area:focus-visible { outline: 3px solid #fff9e8; outline-offset: -5px; border-radius: 15px; }
+.pizzeria-entrance__door-hit-area:disabled { cursor: progress; }
+.pizzeria-entrance__threshold { position: absolute; z-index: 59; top: 54%; left: 50%; display: grid; justify-items: center; gap: 7px; color: #fff9e7; opacity: 0; pointer-events: none; transform: translate(-50%, -50%) scale(.86); }
+.pizzeria-entrance__threshold span { padding: 7px 11px 6px; border: 1px solid rgba(255,248,226,.68); border-radius: 999px; background: rgba(87,45,27,.34); box-shadow: 0 5px 16px rgba(65,35,20,.18); font-size: clamp(8px,1.2cqi,13px); font-weight: 950; letter-spacing: .15em; line-height: 1; white-space: nowrap; }
+.pizzeria-entrance__threshold i { color: #ffe7a8; font-size: clamp(15px,2.2cqi,24px); font-style: normal; line-height: 1; }
+.pizzeria-entrance__fade { position: absolute; z-index: 60; inset: 0; background: radial-gradient(ellipse at 50% 60%, rgba(255,244,220,.9), rgba(193,112,66,.36)); opacity: 0; transition: opacity .35s; pointer-events: none; }
+.pizzeria-entrance__frame.is-opening .pizzeria-entrance__world { transform: scale(2.5); }
+.pizzeria-entrance__frame.is-opening .pizzeria-entrance__door--left { transform: perspective(1100px) rotateY(-76deg); }
+.pizzeria-entrance__frame.is-opening .pizzeria-entrance__door--right { transform: perspective(1100px) rotateY(76deg); }
+.pizzeria-entrance__frame.is-opening .pizzeria-entrance__host,
+.pizzeria-entrance__frame.is-opening .pizzeria-entrance__official-badge { opacity: 0; transition: opacity .4s; }
+.pizzeria-entrance__frame.is-opening .pizzeria-entrance__door-hit-area { opacity: 0; pointer-events: none; }
+.pizzeria-entrance__frame.is-opening .pizzeria-entrance__threshold { animation: entrance-threshold-call .82s .14s cubic-bezier(.18,.78,.25,1) both; }
+.pizzeria-entrance__frame.is-opening .pizzeria-entrance__fade { opacity: .92; transition-delay: .58s; }
+.pizzeria-entrance__stage-footer { display: flex; justify-content: space-between; gap: 12px; padding: 11px 15px 12px; border-top: 1px solid rgba(168,119,78,.2); color: #72573d; font-size: 12px; font-weight: 800; }
+.pizzeria-entrance__stage-footer-hint { color: var(--team-dark,#902a2d); font-size: 10px; font-weight: 950; letter-spacing: .08em; text-transform: uppercase; }
+.pizzeria-entrance__opening-status { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+section.pizzeria-entrance .pizzeria-entrance__info {
+  min-width: 0;
+  padding: clamp(10px, 2.4vw, 31px);
+  border: 1px solid #be9e6c45;
+  border-radius: 4px 15px 15px 4px;
+  background: linear-gradient(130deg, #fff6e773, #fffaf1c4 54%, rgba(var(--team-rgb), .07));
+  box-shadow: 0 9px 23px #7950290d, inset 3px 0 rgba(var(--team-rgb), .37);
+}
+.pizzeria-entrance__identity { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.pizzeria-entrance__identity-badge { display: block; flex: none; width: 48px; height: 48px; object-fit: contain; }
+.pizzeria-entrance__identity .section-kicker { font-size: 10px; }
+.pizzeria-entrance__identity strong { display: block; margin-top: 3px; font-size: 14px; font-weight: 850; overflow-wrap: anywhere; }
+.pizzeria-entrance__info h2 { margin: 16px 0 5px; color: var(--ink); font-size: clamp(26px, 3.1vw, 46px); font-weight: 950; letter-spacing: -.055em; line-height: 1; overflow-wrap: anywhere; text-wrap: balance; }
+.pizzeria-entrance__intro { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+.pizzeria-entrance__quick-info { display: grid; gap: 0; margin: 17px 0 0; }
+.pizzeria-entrance__quick-info > div {
+  display: grid;
+  grid-template-columns: minmax(0, 92px) minmax(0, 1fr);
+  gap: 8px;
+  align-items: baseline;
+  padding: 9px 0;
+  border-top: 1px solid #9d713c35;
+}
+.pizzeria-entrance__quick-info dt { color: #73583c; font-size: 10px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+.pizzeria-entrance__quick-info dd { margin: 0; color: #334437; font-size: 14px; font-weight: 800; line-height: 1.4; overflow-wrap: anywhere; }
+.pizzeria-entrance__quick-info dd[data-booking]::before { display: inline-block; width: 6px; height: 6px; margin: 0 6px 2px 0; border-radius: 50%; background: #986123; content: ''; }
+.pizzeria-entrance__quick-info dd[data-booking="prenotato"]::before { background: #3c7950; }
+.pizzeria-entrance__enter { width: 100%; min-height: 46px; margin-top: 15px; }
+
+@keyframes entrance-badge-settle { from { opacity: 0; transform: translateX(-50%) scale(.94); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
+@keyframes entrance-threshold-call { 0% { opacity: 0; transform: translate(-50%, -42%) scale(.86); } 24%, 75% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; transform: translate(-50%, -65%) scale(1.04); } }
+
+@media (max-width: 900px) {
+  .pizzeria-entrance__layout { grid-template-columns: minmax(0,1.15fr) minmax(210px,.85fr); gap: 13px; }
+  .pizzeria-entrance__info { padding: 15px; }
+  .pizzeria-entrance__identity-badge { width: 40px; height: 40px; }
+  .pizzeria-entrance__info h2 { margin-top: 13px; font-size: 25px; }
+  .pizzeria-entrance__quick-info { margin-top: 13px; }
+}
+@media (max-width: 680px) {
+  .pizzeria-entrance__layout { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .pizzeria-entrance__stage-footer { padding: 8px 11px; font-size: 11px; }
+  section.pizzeria-entrance .pizzeria-entrance__info { display: flex; flex-direction: column; padding: 16px; }
+  .pizzeria-entrance__quick-info { order: 1; margin-top: 14px; }
+  .pizzeria-entrance__info h2 { font-size: 28px; }
+  .pizzeria-entrance__enter { min-height: 48px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pizzeria-entrance__door,
+  .pizzeria-entrance__official-badge,
+  .pizzeria-entrance__threshold { animation: none; }
+  .pizzeria-entrance__world,
+  .pizzeria-entrance__door,
+  .pizzeria-entrance__host,
+  .pizzeria-entrance__official-badge,
+  .pizzeria-entrance__fade { transition-duration: .01ms; }
+}
